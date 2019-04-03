@@ -5,9 +5,9 @@ The script will work on both categorical and numerical data.
 To do this, all column headers in the two files are read and a list is made that contains all headers with no duplications. 
 This list of column headers is then written into a new file.
 
-Next, each row identifier is then written into a list with no duplications. 
+Next, each row identifier is written into a list with no duplications. 
 This is similar to the way your column list was created in the previous step.
-This list is written into a new file and combined with the column header file.
+The row identifier list is combined into the column header file.
 
 I work with research patient data, so my row identifiers are in the form of 'PatientID' and 'Timepoint.' 
 
@@ -16,7 +16,7 @@ In your situation this is probably different. Instead of 'PatientID', you might 
 Also, you might have 'Date' instead of 'Timepoint.'
 If that is the case, then find and replace 'PatientID' and 'Timepoint' with your specific row identifier and date/number.
 
-The file with your unique column names and unique row identifiers is then appended with the original data.
+The file with your unique column names and unique row identifiers is then appended with all of the original data.
 When there are duplicated data points the merge will produce an average for numerical data.
 When there are differences in categorical data, the merge will use the 2nd file's categorical data. 
 This means that the 2nd file to be loaded is assumed to be an update of the original data.
